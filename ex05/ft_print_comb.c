@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcheng <mcheng@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/19 10:00:33 by mcheng            #+#    #+#             */
-/*   Updated: 2022/08/19 10:57:23 by mcheng           ###   ########.fr       */
+/*   Created: 2022/08/19 12:03:39 by mcheng            #+#    #+#             */
+/*   Updated: 2022/08/19 12:07:37 by mcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -21,7 +21,7 @@ void	ft_print_comb(void)
 	int	a;
 	int	b;
 	int	c;
-	
+
 	a = '0';
 	while (a <= '7')
 	{
@@ -35,7 +35,7 @@ void	ft_print_comb(void)
 				ft_putchar(b);
 				ft_putchar(c);
 				{
-					ft_putchar(' ');
+					ft_putchar(',');
 				}
 				c++;
 			}
@@ -43,9 +43,4 @@ void	ft_print_comb(void)
 		}
 		a++;
 	}
-}
-
-int	main(void)
-{
-	ft_print_comb();
 }

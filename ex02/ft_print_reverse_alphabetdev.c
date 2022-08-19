@@ -6,15 +6,10 @@
 /*   By: mcheng <mcheng@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 18:11:42 by mcheng            #+#    #+#             */
-/*   Updated: 2022/08/18 18:14:18 by mcheng           ###   ########.fr       */
+/*   Updated: 2022/08/19 11:44:57 by mcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
 
 void	ft_print_reverse_alphabet(void)
 {
@@ -23,7 +18,7 @@ void	ft_print_reverse_alphabet(void)
 	letter = 'z';
 	while (letter >= 'a')
 	{
-		ft_putchar(letter);
+		write(1, &letter, 1);
 		letter--;
 	}
 }

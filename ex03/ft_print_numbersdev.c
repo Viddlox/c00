@@ -6,15 +6,10 @@
 /*   By: mcheng <mcheng@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 18:28:34 by mcheng            #+#    #+#             */
-/*   Updated: 2022/08/18 19:24:47 by mcheng           ###   ########.fr       */
+/*   Updated: 2022/08/19 11:42:09 by mcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
 
 void	ft_print_number(void)
 {
@@ -23,7 +18,7 @@ void	ft_print_number(void)
 	number = '0';
 	while (number <= '9')
 	{
-		ft_putchar(number);
+		write(1, &number, 1);
 		number++;
 	}
 }
