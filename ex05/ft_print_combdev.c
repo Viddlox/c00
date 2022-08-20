@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*   ft_print_combdev.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcheng <mcheng@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/19 10:00:33 by mcheng            #+#    #+#             */
-/*   Updated: 2022/08/19 12:00:12 by mcheng           ###   ########.fr       */
+/*   Updated: 2022/08/20 14:06:27 by mcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_putchar(char a,	char b, char c)
 {
+	write (1, &a, 1);
+	write (1, &b, 1);
 	write (1, &c, 1);
+	if (a != '7' || b != '8' || c != '9')
+	{
+		write(1, ", ", 2);
+	}
 }
 
 void	ft_print_comb(void)
-{
-	int	a;
-	int	b;
-	int	c;
-	
+{	
+	char	a;
+	char	b;
+	char	c;
 	a = '0';
 	while (a <= '7')
 	{
@@ -31,15 +36,10 @@ void	ft_print_comb(void)
 			c = b + 1;
 			while (c <= '9')
 			{
-				ft_putchar(a);
-				ft_putchar(b);
-				ft_putchar(c);
-				{
-					ft_putchar(',');
-				}
+				ft_putchar(a, b, c);
 				c++;
 			}
-				b++;
+			b++;
 		}
 		a++;
 	}
