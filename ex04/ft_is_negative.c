@@ -6,7 +6,7 @@
 /*   By: mcheng <mcheng@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/19 09:45:17 by mcheng            #+#    #+#             */
-/*   Updated: 2022/08/19 09:59:38 by mcheng           ###   ########.fr       */
+/*   Updated: 2022/08/20 16:39:40 by mcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -27,4 +27,3 @@ void	ft_is_negative(int n)
 		ft_putchar('P');
 	}
 }
-
