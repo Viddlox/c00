@@ -6,7 +6,7 @@
 /*   By: mcheng <mcheng@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 16:22:38 by mcheng            #+#    #+#             */
-/*   Updated: 2022/08/18 17:20:19 by mcheng           ###   ########.fr       */
+/*   Updated: 2022/08/21 12:16:52 by mcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -23,7 +23,7 @@ void	ft_print_alphabet(void)
 	letter = 'a';
 	while (letter <= 'z')
 	{
-		ft_purchar(letter);
+		ft_putchar(letter);
 		letter++;
 	}
 }
