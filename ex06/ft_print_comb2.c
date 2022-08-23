@@ -5,49 +5,47 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcheng <mcheng@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/20 14:49:30 by mcheng            #+#    #+#             */
-/*   Updated: 2022/08/20 14:50:47 by mcheng           ###   ########.fr       */
+/*   Created: 2022/08/23 22:28:51 by mcheng            #+#    #+#             */
+/*   Updated: 2022/08/23 22:29:30 by mcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void    ft_putchar(char c)
 {
-	write(1, &c, 1);
+        write(1, &c, 1);
 }
 
-char	ft_helper(char c, int n)
+void    ft_print_comb2(void)
 {
-	char	result;
+        int     a;
+        int     b;
 
-	result = 0;
-	if (n == 0)
-		result = c / 10 + '0';
-	else
-		result = c % 10 + '0';
-	return (result);
+        a = 0;
+        b = 1;
+        while (a < 99)
+        {
+                b = a + 1;
+                while (b < 100)
+                {
+                        ft_putchar((a / 10) + '0');
+                        ft_putchar((a % 10) + '0');
+                        write(1," ",1);
+                        ft_putchar((b / 10) + '0');
+                        ft_putchar((b % 10) + '0');
+                        if (!(a == 98 && b == 99))
+                        {
+                                write(1, ", ", 2);
+                        }
+                        b++;
+                }
+                a++;
+        }
+
 }
 
-void	ft_print_comb2(void)
+int main(void)
 {
-	char	a;
-	char	b;
-
-	a = 0;
-	while (a <= 98)
-	{
-		b = a + 1;
-		while (b <= 99)
-		{
-			ft_putchar(ft_helper(a, 0));
-			ft_putchar(ft_helper(a, 1));
-			ft_putchar(' ');
-			ft_putchar(ft_helper(b, 0));
-			ft_putchar(ft_helper(b, 1));
-			if (!(a == 98 && b == 99))
-				write(1, ", ", 2);
-			b++;
-		}
-		a++;
-	}
+        ft_print_comb2();
 }
