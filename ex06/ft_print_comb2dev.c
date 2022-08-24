@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_comb2dev.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mcheng <mcheng@student.42kl.edu.my>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/24 08:26:52 by mcheng            #+#    #+#             */
+/*   Updated: 2022/08/24 09:00:23 by mcheng           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
 void	ft_putchar(char c)
@@ -19,7 +31,7 @@ void	ft_print_comb2(void)
 		{
 			ft_putchar((a / 10) + '0');
 			ft_putchar((a % 10) + '0');
-			write(1," ",1);
+			write(1, " ", 1);
 			ft_putchar((b / 10) + '0');
 			ft_putchar((b % 10) + '0');
 			if (!(a == 98 && b == 99))
@@ -29,11 +41,5 @@ void	ft_print_comb2(void)
 			b++;
 		}
 		a++;
-	}	
-
-}	
-
-int main(void)
-{
-	ft_print_comb2();
+	}
 }
